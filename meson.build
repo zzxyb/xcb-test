@@ -85,8 +85,8 @@ examples = {
 		'dep': [xcb_damage_dep, xcb_proto_dep],
 	},
 
-	'no_title_window': {
-		'src': 'no_title_window.c',
+	'no_decorations_window': {
+		'src': 'no_decorations_window.c',
 		'dep': [xcb_dep, xcb_proto_dep],
 	},
 }
