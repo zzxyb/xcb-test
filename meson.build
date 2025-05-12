@@ -84,9 +84,12 @@ examples = {
 		'src': 'monitoring_damage.c',
 		'dep': [xcb_damage_dep, xcb_proto_dep],
 	},
-
 	'no_decorations_window': {
 		'src': 'no_decorations_window.c',
+		'dep': [xcb_dep, xcb_proto_dep],
+	},
+	'opacity_window': {
+		'src': 'opacity_window.c',
 		'dep': [xcb_dep, xcb_proto_dep],
 	},
 }
