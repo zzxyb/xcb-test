@@ -79,25 +79,6 @@ xcb_xv_dep = dependency('xcb-xv', required: true, disabler: true)
 xcb_proto_dep = dependency('xcb-proto', required: true, disabler: true)
 xcb_input_dep =  dependency('xcb-xinput', required: true, disabler: true)
 
-examples = {
-	'monitoring_damage': {
-		'src': 'monitoring_damage.c',
-		'dep': [xcb_damage_dep, xcb_proto_dep],
-	},
-	'no_decorations_window': {
-		'src': 'no_decorations_window.c',
-		'dep': [xcb_dep, xcb_proto_dep],
-	},
-	'opacity_window': {
-		'src': 'opacity_window.c',
-		'dep': [xcb_dep, xcb_proto_dep],
-	},
-}
-
-foreach name, element : examples
-	executable(
-		name,
-		element.get('src', []),
-		dependencies: [xcb_dep, element.get('dep', [])],
-	)
-endforeach
+subdir('opacity_window')
+subdir('no_decorations_window')
+subdir('monitoring_damage')
