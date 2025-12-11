@@ -15,7 +15,7 @@ typedef struct {
 
 #define MWM_HINTS_DECORATIONS (1L << 1)
 
-int main() {
+int main(int argc, char *argv[]) {
 	xcb_connection_t *connection = xcb_connect(NULL, NULL);
 	if (xcb_connection_has_error(connection)) {
 		fprintf(stderr, "Error: Cannot open display.\n");

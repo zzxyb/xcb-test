@@ -10,7 +10,9 @@
 #include <xcb/xproto.h>
 #include <xcb/damage.h>
 
-int main() {
+#include <stdbool.h>
+
+int main(int argc, char *argv[]) {
 	xcb_connection_t *connection = xcb_connect(NULL, NULL);
 	if (xcb_connection_has_error(connection)) {
 		fprintf(stderr, "Error: Cannot open display.\n");

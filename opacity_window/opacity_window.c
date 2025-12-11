@@ -9,7 +9,7 @@
 #define WINDOW_WIDTH  400
 #define WINDOW_HEIGHT 300
 
-int main() {
+int main(int argc, char *argv[]) {
 	xcb_connection_t *conn = xcb_connect(NULL, NULL);
 	if (xcb_connection_has_error(conn)) {
 		fprintf(stderr, "Error: Cannot open display.\n");
