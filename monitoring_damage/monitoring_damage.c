@@ -68,9 +68,9 @@ int main() {
 			fprintf(stderr, "xcb damage event==========\n");
 				if ((event->response_type & ~0x80) == (damage_event_id + XCB_DAMAGE_NOTIFY)) {
 					xcb_damage_notify_event_t *damage_event =  (xcb_damage_notify_event_t *)event;
-					fprintf(stdout, "xcb damage area: [%" PRIx16 ", %" PRIx16 ", %" PRIx16 ", %" PRIx16 "]\n",
+					fprintf(stdout, "xcb damage area: [%" PRId16 ", %" PRId16 ", %" PRIu16 ", %" PRIu16 "]\n",
 						damage_event->area.x, damage_event->area.y, damage_event->area.width, damage_event->area.height);
-					fprintf(stdout, "xcb damage geometry: [%" PRIx16 ", %" PRIx16 ", %" PRIx16 ", %" PRIx16 "]\n",
+					fprintf(stdout, "xcb damage geometry: [%" PRId16 ", %" PRId16 ", %" PRIu16 ", %" PRIu16 "]\n",
 						damage_event->geometry.x, damage_event->geometry.y, damage_event->geometry.width, damage_event->geometry.height);
 					free(event);
 				}
